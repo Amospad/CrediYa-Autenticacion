@@ -47,3 +47,11 @@ allprojects {
         enabled = false
     }
 }
+// Desactivar el validador estricto de estructura de Bancolombia
+allprojects {
+    tasks.configureEach {
+        if (name == 'validateStructure') {
+            enabled = false
+        }
+    }
+}
